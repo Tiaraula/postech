@@ -4,9 +4,10 @@ use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HaiController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
  
-Route::get('/miltech/{nik}/{nama}/cek', [HaiController::class, 'index']);
+Route::get('/postech/{nik}/{nama}/cek', [HaiController::class, 'index']);
 
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::get('/', [AuthController::class, 'dashboard']); 
@@ -17,3 +18,4 @@ Route::post('post-registration', [AuthController::class, 'postRegistration'])->n
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('users', UserController::class); 
+Route::resource('products', ProductController ::class); 
