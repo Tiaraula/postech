@@ -9,7 +9,7 @@
                   <div class="card-header">Edit Produk</div>
                   <div class="card-body">
 
-                       <form action="{{ route('producks.update', $produck->id ) }} " method="POST">
+                       <form action="{{ route('products.update', $product->id ) }} " method="POST">
                           @csrf
                           @method('PUT')
                           <div class="form-group row mt-3">

@@ -46,7 +46,7 @@
                                 @else
                                     Unavailable
                                 @endif
-                        </td>
+                            </td>
                                 <td> 
                                     <a href="{{ route('products.edit', $row->id) }}" class="btn btn-sm btn-warning">
                                         Edit

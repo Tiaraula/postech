@@ -19,3 +19,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('users', UserController::class); 
 Route::resource('products', ProductController ::class); 
+Route::controller(UserController::class)->group(function(){
+Route::get('users-export', [UserController::class, 'export'])->name('users.export');
+Route::post('users-import',[UserController::class, 'import'])->name('users.import');
+});
